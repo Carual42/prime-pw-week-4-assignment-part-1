@@ -21,45 +21,59 @@ function helloName( name ) {
 console.log(helloName('Alex'))
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
+function addNumbers( firstNumber, secondNumber ) {
+  sum = firstNumber + secondNumber;
   // return firstNumber + secondNumber;
+  return sum;
 }
-
+console.log(addNumbers(1, 2));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( firstNumber, secondNumber, thirdNumber ){
+  sum = firstNumber * secondNumber * thirdNumber;
+  // return firstNumber * secondNumber * thirdNumber;
+  return sum;
 }
-
+console.log(multiplyThree(2, 2, 5))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
+    return false;
 }
+console.log(isPositive(-5))
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-
+console.log('neat it worked')
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
-
+const testArray = ['a', 'b', 'c']
+function getLast() {
+  lastItem = testArray.length-1;
+return (testArray[lastItem]);
 }
-
+console.log(getLast())
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for(let i=0; i<array.length; i++){
+   if(value === array[i]){
+    return true;
+    }
+    else{
+    return false;
+    }
+  }
 }
-
+console.log(find('a', testArray))
 // ----------------------
 // Stretch Goals
 // ----------------------
